@@ -1,6 +1,6 @@
 /* -------------------------------
   通信販売システム - style.css
-  フッター固定＋スマホ対応＋中央レイアウト
+  フッター固定＋スマホ対応＋中央レイアウト＋左右余白対応
 -------------------------------- */
 
 /* 全体レイアウト */
@@ -31,7 +31,7 @@ main {
   margin: 0 auto;
   padding: 1.5em;
   background: white;
-  width: 100%; /* スマホで有効にするために追加 */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -126,13 +126,27 @@ h1, h2 {
   background-color: #1c6fa5;
 }
 
-/* スマホレイアウト調整 */
-@media (max-width: 480px) {
+/* スマホレイアウト調整（～600px） */
+@media (max-width: 600px) {
   main {
     padding: 1em;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
   }
 
   #products {
-    grid-template-columns: 1fr; /* スマホは1列で！ */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1em;
+    padding: 0 1em; /* 全体に左右余白 */
+  }
+
+  #products li {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
