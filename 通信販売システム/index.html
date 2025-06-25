@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>通信販売システム - 商品一覧</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+  </header>
+
+  <main>
+    <section id="search">
+      <h2>商品検索</h2>
+      <form id="searchForm" class="search-form-3" role="search">
+        <input type="text" id="searchInput" placeholder="商品名を入力">
+        <select id="categorySelect">
+          <option value="">-- カテゴリを選択 --</option>
+          <option value="食器">食器</option>
+          <option value="洋服">洋服</option>
+          <option value="家具">家具</option>
+          <option value="スマホ関連">スマホ関連</option>
+          <option value="カバン">カバン</option>
+          <option value="本">本</option>
+        </select>
+        <button type="submit" aria-label="検索"></button>
+      </form>
+    </section>
+
+    <section id="productList">
+      <h2>商品一覧</h2>
+      <ul id="products">
+        <!-- 商品リストはscript.jsで動的に表示 -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>
