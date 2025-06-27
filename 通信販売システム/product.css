@@ -1,0 +1,242 @@
+/* -------------------------------
+  通信販売システム - 商品詳細ページ
+  フッター固定＋スマホ対応＋Amazon風スタイル（画像左・情報右）＋改善版＋選択ボックスサイズ調整＋ラベル揃え
+-------------------------------- */
+
+/* 共通レイアウト */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header, footer {
+  background-color: #2589d0;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 2em 1em;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+/* カートアイコン配置 */
+header {
+  background-color: #2589d0;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: center;  /* h1を中央に */
+  align-items: center;      /* 高さを中央に */
+  position: relative;       /* カートを絶対位置で配置できるように */
+}
+
+.cart-icon {
+  position: absolute;
+  right: 1em;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: url("https://www.svgrepo.com/show/533043/cart-shopping.svg") no-repeat center;
+  background-size: 24px 24px;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 商品詳細レイアウト */
+#product {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2em;
+  border: 1px solid #ddd;
+  padding: 2em;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  min-height: 60vh;
+  box-sizing: border-box;
+}
+
+.product-image {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  padding: 1em;
+  background: white;
+  flex-shrink: 0;
+}
+
+/* 商品情報部分の調整 */
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1em;
+  min-width: 0;
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+
+.product-info h2 {
+  font-size: 1.6em;
+  margin: 0 0 0.3em;
+}
+
+.product-description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 0.3em;
+}
+
+.product-info .price {
+  color: #B12704;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+.purchase-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.purchase-options .option-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  width: 100%;
+  max-width: 280px;
+}
+
+.purchase-options .option-group label {
+  display: inline-block;
+  min-width: 4em;
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+.purchase-options select,
+.purchase-options input[type="number"] {
+  padding: 0.6em;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.product-info button {
+  background-color: #FFD814;
+  border: 1px solid #FCD200;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+  margin-top: 0.5em;
+}
+
+.product-info button:hover {
+  background-color: #F7CA00;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1em;
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+  }
+
+  #product {
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    min-height: 70vh;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .product-info {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .purchase-options .option-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-info button,
+  .product-info select,
+  .product-info input[type="number"] {
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  .product-info button {
+    margin-top: 0.5em;
+  }
+
+  .cart-icon {
+    right: 0.8em;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background-color: #ccc;
+    background-size: 22px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通信販売システム - 商品詳細</title>
+  <link rel="stylesheet" href="product.css">
+  <script src="product-detail.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>商品詳細</h1>
+    <a href="cart.html" class="cart-icon" aria-label="カートを見る"></a>
+  </header>
+
+  <main class="product-detail">
+    <section id="product">
+      <!-- 左右を明示的に分ける -->
+      <div class="product-left">
+        <img id="product-image" src="" alt="商品画像" class="product-image">
+      </div>
+
+      <div class="product-info">
+        <h2 id="product-name">商品名</h2>
+        <p id="product-description">商品説明が入ります。</p>
+        <p id="product-price" class="price">価格: 〇〇円</p>
+
+        <div class="purchase-options">
+          <label for="quantity">数量:
+            <input type="number" id="quantity" value="1" min="1">
+          </label>
+          <button id="add-to-cart">カートに入れる</button>
+        </div>
+      </div>
+    </section>
+
+    <p><a href="index.html">← 商品一覧に戻る</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>
