@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通信販売システム - 情報入力</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="checkout.css" />
+  <script src="checkout.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <a href="cart.html" class="cart-icon" aria-label="カートを見る"></a>
+  </header>
+
+  <main>
+    <ol class="timeline">
+      <li class="prev">カート</li>
+      <li class="current">情報入力</li>
+      <li>支払い選択</li>
+      <li>内容確認</li>
+      <li>購入完了</li>
+    </ol>
+
+    <section id="checkoutForm">
+      <h2>お客様情報の入力</h2>
+
+      <label for="name">氏名：</label>
+      <input type="text" id="name" required />
+
+      <label for="address">住所：</label>
+      <input type="text" id="address" required />
+
+      <label for="contact">連絡先（電話番号またはメール）：</label>
+      <input type="text" id="contact" required />
+
+      <button id="toPayment">支払い方法を選択する</button>
+
+      <div class="cart-links">
+        <a href="cart.html">← カートに戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>

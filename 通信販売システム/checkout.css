@@ -1,0 +1,82 @@
+/* 通信販売システム - checkout.css */
+
+/* 入力フォームの外枠 */
+#checkoutForm {
+  padding: 2em 1.5em;;
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 見出し */
+#checkoutForm h2 {
+  margin-bottom: 1.5em;
+}
+
+/* 各ラベル */
+#checkoutForm label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 入力欄 */
+#checkoutForm input[type="text"] {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+/* ボタン */
+#toPayment {
+  background-color: #FFD814;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1em;
+}
+
+#toPayment:hover {
+  background-color: #F7CA00;
+}
+
+/* リンク */
+.cart-links {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.cart-links a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.cart-links a:hover {
+  text-decoration: underline;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+  #checkoutForm {
+    padding: 1em;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  #toPayment {
+    width: 100%;
+  }
+}
