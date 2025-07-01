@@ -1,0 +1,80 @@
+/* 通信販売システム - complete.css */
+
+#complete {
+  padding: 2em;
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#complete h2 {
+  color: #2589d0;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+}
+
+#complete p {
+  font-size: 1.1em;
+  margin: 0.8em 0;
+  color: #333;
+}
+
+#complete .note {
+  margin-top: 1em;
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  word-break: break-word;
+  text-align: center;
+}
+
+#orderId {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #B12704;
+}
+
+#orderDate {
+  font-size: 1em;
+  color: #333;
+}
+
+.cart-links {
+  margin-top: 2em;
+}
+
+.cart-links a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.cart-links a:hover {
+  text-decoration: underline;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  #complete {
+    padding: 1em;
+    font-size: 0.95em;
+  }
+
+  #complete h2 {
+    font-size: 1.5em;
+    word-break: keep-all;
+    line-height: 1.4;
+  }
+
+  #complete .note {
+    font-size: 1em;
+    padding: 0 0.5em;
+  }
+
+  #complete p {
+    line-height: 1.6;
+  }
+}

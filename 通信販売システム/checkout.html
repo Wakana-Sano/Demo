@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通信販売システム - 情報入力</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="checkout.css" />
+  <script src="cart_badge.js" defer></script>
+  <script src="menu_toggle.js" defer></script>
+  <script src="checkout.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="menu-badge" id="menu-badge"></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <div class="menu-close" id="menu-close">&times;</div>
+      <ul>
+        <li>
+          <a href="index.html">📋 商品一覧</a>
+        </li>
+        <li>
+          <a href="cart.html" class="cart-menu-link">
+            🛒 カートを見る<span class="menu-cart-badge" id="menu-cart-badge"></span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">📦 注文履歴</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ol class="timeline">
+      <li class="prev">カート</li>
+      <li class="current">情報入力</li>
+      <li>支払い情報</li>
+      <li>内容確認</li>
+      <li>購入完了</li>
+    </ol>
+
+    <section id="checkoutForm">
+      <h2>お客様情報の入力</h2>
+
+      <label for="name">氏名：</label>
+      <input type="text" id="name" required />
+
+      <label for="postal">郵便番号：</label>
+      <input type="text" id="postal" placeholder="例：123-4567" required />
+
+      <label for="prefecture">都道府県：</label>
+      <select id="prefecture" required>
+        <option value="">-- 都道府県を選択 --</option>
+        <option>北海道</option>
+        <option>青森県</option>
+        <option>岩手県</option>
+        <option>宮城県</option>
+        <option>秋田県</option>
+        <option>山形県</option>
+        <option>福島県</option>
+        <option>茨城県</option>
+        <option>栃木県</option>
+        <option>群馬県</option>
+        <option>埼玉県</option>
+        <option>千葉県</option>
+        <option>東京都</option>
+        <option>神奈川県</option>
+        <option>新潟県</option>
+        <option>富山県</option>
+        <option>石川県</option>
+        <option>福井県</option>
+        <option>山梨県</option>
+        <option>長野県</option>
+        <option>岐阜県</option>
+        <option>静岡県</option>
+        <option>愛知県</option>
+        <option>三重県</option>
+        <option>滋賀県</option>
+        <option>京都府</option>
+        <option>大阪府</option>
+        <option>兵庫県</option>
+        <option>奈良県</option>
+        <option>和歌山県</option>
+        <option>鳥取県</option>
+        <option>島根県</option>
+        <option>岡山県</option>
+        <option>広島県</option>
+        <option>山口県</option>
+        <option>徳島県</option>
+        <option>香川県</option>
+        <option>愛媛県</option>
+        <option>高知県</option>
+        <option>福岡県</option>
+        <option>佐賀県</option>
+        <option>長崎県</option>
+        <option>熊本県</option>
+        <option>大分県</option>
+        <option>宮崎県</option>
+        <option>鹿児島県</option>
+        <option>沖縄県</option>
+      </select>
+
+      <label for="city">市区町村以下：</label>
+      <input type="text" id="city" placeholder="〇〇市△△町1-2-3" required />
+
+      <label for="building">建物名・部屋番号：</label>
+      <input type="text" id="building" placeholder="〇〇マンション101号室（任意）" />
+
+      <label for="contact">連絡先（メールアドレス）：</label>
+      <input type="text" id="contact" required />
+
+      <button id="toPayment">支払い方法を選択する</button>
+
+      <div class="cart-links">
+        <a href="cart.html">← カートに戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>

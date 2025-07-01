@@ -1,0 +1,333 @@
+/* -------------------------------
+  通信販売システム - style.css
+  フッター固定＋スマホ対応＋中央レイアウト＋左右余白対応
+  ハンバーガーメニューバッジ＆「カートを見る」バッジ横配置
+-------------------------------- */
+
+/* 全体レイアウト */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header, footer {
+  background-color: #2589d0;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5em;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+}
+
+/* カートアイコン配置 */
+header {
+  background-color: #2589d0;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: center;  /* h1を中央に */
+  align-items: center;      /* 高さを中央に */
+  position: relative;       /* カートを絶対位置で配置できるように */
+}
+
+.cart-icon {
+  position: absolute;
+  right: 1em;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: url("https://www.svgrepo.com/show/533043/cart-shopping.svg") no-repeat center;
+  background-size: 24px 24px;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2000;
+}
+
+.hamburger span:not(.menu-badge) {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.open span {
+  background-color: black !important;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+/* ★ハンバーガーメニューバッジ */
+.menu-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 14px;
+  height: 14px;
+  background: red !important;
+  border-radius: 50%;
+  z-index: 2200;
+  display: none;  /* ←JSで切り替え */
+}
+
+/* メニュー本体 */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -220px; /* 初期は画面外に隠す */
+  width: 200px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+.menu.show {
+  right: 0; /* メニューを画面内にスライドイン */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+}
+
+.menu li {
+  padding: 1em;
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2589d0;
+  line-height: 1.2;
+}
+
+/* ★「カートを見る」バッジ（右横表示） */
+.menu-cart-badge {
+  display: none;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: middle !important;
+  position: static !important;
+}
+
+/* メニュークローズ */
+.menu-close {
+  position: absolute;
+  top: 28px;
+  right: 18px;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #222;
+  z-index: 1500;
+}
+
+/* 検索フォーム */
+.search-form-3 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.search-form-3 input,
+.search-form-3 select {
+  flex-grow: 1;
+  height: 45px;
+  padding: 0 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.search-form-3 button {
+  width: 50px;
+  height: 45px;
+  border: none;
+  background: url("https://www.svgrepo.com/show/7109/search.svg") center center no-repeat;
+  background-size: 24px;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 商品一覧 */
+a.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#products {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1em;
+}
+
+#products li {
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#products img {
+  width: auto;
+  height: 120px; /* 高さ固定 */
+  object-fit: contain;
+}
+
+#products strong {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+}
+
+#products span {
+  color: #555;
+}
+
+#products input[type="number"] {
+  width: 60px;
+  padding: 0.25em;
+  margin-left: 0.5em;
+}
+
+#products button {
+  padding: 0.4em 1em;
+  background-color: #2589d0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#products button:hover {
+  background-color: #1c6fa5;
+}
+
+/* スマホレイアウト調整（～600px） */
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  #products {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1em;
+    padding: 0 1em; /* 全体に左右余白 */
+  }
+
+  #products li {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .cart-icon {
+    right: 0.8em;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background-color: #ccc;
+    background-size: 22px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

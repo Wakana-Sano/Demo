@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通信販売システム - 注文完了</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="complete.css" />
+  <script src="cart_badge.js" defer></script>
+  <script src="menu_toggle.js" defer></script>
+  <script src="complete.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="menu-badge" id="menu-badge"></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <div class="menu-close" id="menu-close">&times;</div>
+      <ul>
+        <li>
+          <a href="index.html">📋 商品一覧</a>
+        </li>
+        <li>
+          <a href="cart.html" class="cart-menu-link">
+            🛒 カートを見る<span class="menu-cart-badge" id="menu-cart-badge"></span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">📦 注文履歴</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ol class="timeline">
+      <li class="prev">カート</li>
+      <li class="prev">情報入力</li>
+      <li class="prev">支払い情報</li>
+      <li class="prev">内容確認</li>
+      <li class="current">購入完了</li>
+    </ol>
+
+    <section id="complete">
+      <h2>ご注文ありがとうございます！</h2>
+      <p>ご注文を受け付けました。</p>
+      <p>注文番号：<span id="orderId"></span></p>
+      <p>注文日時：<span id="orderDate"></span></p>
+      <p class="note">お支払いは既に完了しております。<br><br>※発送準備中です。<br>商品到着までしばらくお待ちください。</p>
+
+      <p id="orderFallback" class="note" style="display: none;">
+      ※注文情報が見つかりません。再度お試しください。
+      </p>
+
+      <div class="cart-links">
+        <a href="index.html">← 商品一覧へ戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>

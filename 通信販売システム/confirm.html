@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通信販売システム - 内容確認</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="confirm.css" />
+  <script src="cart_badge.js" defer></script>
+  <script src="menu_toggle.js" defer></script>
+  <script src="confirm.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="menu-badge" id="menu-badge"></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <div class="menu-close" id="menu-close">&times;</div>
+      <ul>
+        <li>
+          <a href="index.html">📋 商品一覧</a>
+        </li>
+        <li>
+          <a href="cart.html" class="cart-menu-link">
+            🛒 カートを見る<span class="menu-cart-badge" id="menu-cart-badge"></span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">📦 注文履歴</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ol class="timeline">
+      <li class="prev">カート</li>
+      <li class="prev">情報入力</li>
+      <li class="prev">支払い情報</li>
+      <li class="current">内容確認</li>
+      <li>購入完了</li>
+    </ol>
+
+    <section id="confirm">
+      <h2>ご注文内容の確認</h2>
+
+    <div class="confirm-block">
+      <h3>お客様情報</h3>
+      <p id="confirmName"></p>           <!-- 氏名 -->
+      <p id="confirmZip"></p>            <!-- 郵便番号 -->
+      <p id="confirmAddress"></p>       <!-- 住所（都道府県＋市区町村＋建物名） -->
+      <p id="confirmContact"></p>       <!-- 連絡先 -->
+    </div>
+
+    <div class="confirm-block">
+      <h3>クレジットカード情報</h3>
+      <p id="confirmCardName"></p>      <!-- 名義人 -->
+      <p id="confirmCardNumber"></p>    <!-- カード番号 -->
+      <p id="confirmExpiry"></p>        <!-- 有効期限 -->
+    </div>
+
+    <div class="confirm-block">
+      <h3>ご注文商品</h3>
+      <ul id="confirmItems">
+        <!-- JSで商品一覧を挿入 -->
+      </ul>
+      <p id="confirmTotal" class="total-price"></p>  <!-- 合計金額 -->
+    </div>
+
+      <button id="confirmOrder">注文を確定する</button>
+
+      <div class="cart-links">
+        <a href="payment.html">← 支払いに戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>

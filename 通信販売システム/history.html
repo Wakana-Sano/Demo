@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>通信販売システム - 注文履歴</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="history.css">
+  <script src="cart_badge.js" defer></script>
+  <script src="menu_toggle.js" defer></script>
+  <script src="history.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="menu-badge" id="menu-badge"></span>
+    </div>
+    <nav class="menu" id="menu">
+      <div class="menu-close" id="menu-close">&times;</div>
+      <ul>
+        <li>
+          <a href="index.html">📋 商品一覧</a>
+        </li>
+        <li>
+          <a href="cart.html" class="cart-menu-link">
+            🛒 カートを見る<span class="menu-cart-badge" id="menu-cart-badge"></span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html" aria-current="page">📦 注文履歴</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="history">
+      <h2>注文履歴</h2>
+      <!-- JSで履歴がここに追加される -->
+      <div id="orderHistoryContainer"></div>
+      <div id="noHistoryMsg" style="display:none;">注文履歴がありません。</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>

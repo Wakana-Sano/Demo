@@ -1,0 +1,91 @@
+/* 通信販売システム - payment.css */
+
+/* 外枠 */
+#paymentForm {
+  padding: 2em;
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 見出し */
+#paymentForm h2 {
+  margin-bottom: 1.5em;
+}
+
+/* ラベル */
+#paymentForm label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* テキスト入力 */
+#paymentForm input[type="text"],
+#paymentForm select {
+  width: 100%;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+/* 有効期限（横並び） */
+.expiry {
+  display: flex;
+  gap: 0.5em;
+}
+
+.expiry select {
+  flex: 1;
+}
+
+/* ボタン */
+#toConfirm {
+  background-color: #FFD814;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1em;
+}
+
+#toConfirm:hover {
+  background-color: #F7CA00;
+}
+
+/* リンク */
+.cart-links {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.cart-links a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.cart-links a:hover {
+  text-decoration: underline;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+  #paymentForm {
+    padding: 1em;
+  }
+
+  #toConfirm {
+    width: 100%;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>通信販売システム - 支払い情報</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="payment.css" />
+  <script src="cart_badge.js" defer></script>
+  <script src="menu_toggle.js" defer></script>
+  <script src="payment.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>通信販売システム</h1>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="menu-badge" id="menu-badge"></span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <div class="menu-close" id="menu-close">&times;</div>
+      <ul>
+        <li>
+          <a href="index.html">📋 商品一覧</a>
+        </li>
+        <li>
+          <a href="cart.html" class="cart-menu-link">
+            🛒 カートを見る<span class="menu-cart-badge" id="menu-cart-badge"></span>
+          </a>
+        </li>
+        <li>
+          <a href="history.html">📦 注文履歴</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ol class="timeline">
+      <li class="prev">カート</li>
+      <li class="prev">情報入力</li>
+      <li class="current">支払い情報</li>
+      <li>内容確認</li>
+      <li>購入完了</li>
+    </ol>
+
+    <section id="paymentForm">
+      <h2>クレジットカード情報の入力</h2>
+
+      <label for="cardNumber">カード番号（16桁）：</label>
+      <input type="text" id="cardNumber" maxlength="16" placeholder="例: 1234123412341234" />
+
+      <label for="cardName">名義人（ローマ字）：</label>
+      <input type="text" id="cardName" placeholder="例: TARO YAMADA" />
+
+      <label for="expiryMonth">有効期限：</label>
+      <div class="expiry">
+        <select id="expiryMonth">
+          <option value="">月</option>
+          <!-- JSで1〜12を自動追加予定 -->
+        </select>
+        <select id="expiryYear">
+          <option value="">年</option>
+          <!-- JSで今年〜10年後を自動追加予定 -->
+        </select>
+      </div>
+
+      <label for="securityCode">セキュリティコード（3桁）：</label>
+      <input type="text" id="securityCode" maxlength="3" placeholder="例: 123" />
+
+      <button id="toConfirm">内容確認へ進む</button>
+
+      <div class="cart-links">
+        <a href="checkout.html">← 情報入力に戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 通信販売システム</p>
+  </footer>
+</body>
+</html>
